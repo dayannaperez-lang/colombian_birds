@@ -160,7 +160,7 @@ SCHEDULER  = StepLR (step_size=10, gamma=0.5)
 |---|---|
 | Accuracy validación | 0.93 |
 | F1-score macro | 0.84|
-| Mejor época | — |
+
 
 ### Discusión
 
@@ -168,22 +168,6 @@ La arquitectura CNN + LSTM demostró ser una elección adecuada para este proble
 
 Con un dataset de 1.101 muestras y 29 clases, el modelo enfrenta el reto del **desbalance de datos** y la **escasez de muestras por clase**.
 El modelo alcanzó un accuracy del 93%, con F1-score perfecto en la mayoría de las 29 especies. Las clases 6, 17 y 25 obtuvieron F1-score de 0.00, pero las tres cuentan con solo 2 muestras en validación, lo que hace que cualquier error colapse las métricas. Las clases 5, 8 y 16 presentaron métricas más bajas con mayor soporte, lo que indica dificultad real del modelo, posiblemente por similitud acústica entre especies. El principal factor limitante es el desbalance de clases.
-
----
-
-## Estructura del Proyecto
-
-```
-📦 bird-rnn/
-├── 📁 data/
-│   └── audios/           # Grabaciones descargadas de Xeno-canto
-├── 📁 outputs/
-│   ├── best_bird_model.pt
-│   ├── confusion_matrix.png
-│   └── training_history.png
-├── notebook.ipynb        # Pipeline completo
-└── README.md
-```
 
 ---
 
